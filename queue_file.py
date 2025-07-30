@@ -9,7 +9,13 @@ class Queue:
 
     def dequeue(self):
         # TODO: Remove and return the item from the front of the queue
-        pass
+        if not self.is_empty():
+            removed = self.items.pop(0)
+            print(f"Dequeued {removed} | Queue: {self.items}")
+            return removed
+        else:
+            print("Queue is empty. Nothing to dequeue.")
+            return None
 
     def peek(self):
         # TODO: Return the item at the front of the queue without removing it
