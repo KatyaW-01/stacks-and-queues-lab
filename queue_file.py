@@ -19,11 +19,16 @@ class Queue:
 
     def peek(self):
         # TODO: Return the item at the front of the queue without removing it
-        pass
+        if not self.is_empty():
+            print(f"Front of queue: {self.items[0]}")
+            return self.items[0]
+        else:
+            print("Queue is empty. No front item.")
+            return None
 
     def is_empty(self):
         # TODO: Return True if the queue is empty
-        pass
+        return len(self.items) == 0
 
     def select_and_announce_winner(self):
         """
