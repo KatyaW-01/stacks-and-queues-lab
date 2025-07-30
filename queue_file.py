@@ -37,4 +37,8 @@ class Queue:
         Returns the name of the winning customer.
         """
         # TODO: Implement winner selection and dequeue process
-        pass
+        random_index = random.randint(0,len(self.items))
+        winner = self.items[random_index]
+        for i in range(random_index + 1):
+            self.dequeue()
+        return winner
