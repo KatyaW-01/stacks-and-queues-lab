@@ -5,8 +5,7 @@ class Queue:
         self.items = []
 
     def enqueue(self, item):
-        # TODO: Add an item to the end of the queue
-        pass
+        self.items.append(item)
 
     def dequeue(self):
         # TODO: Remove and return the item from the front of the queue
